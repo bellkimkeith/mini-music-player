@@ -14,7 +14,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        "spin-slow": "spin 3s linear 0s infinite forwards",
+        "spin-slow": "spin 5s linear 0s infinite forwards",
+      },
+      boxShadow: {
+        disc: "0 10px 30px rgba(0, 0, 0, 0.1)",
       },
     },
   },
