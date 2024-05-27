@@ -4,7 +4,6 @@ import Forward from "@/components/icons/Forward";
 import Pause from "@/components/icons/Pause";
 import Play from "@/components/icons/Play";
 import Previous from "@/components/icons/Previous";
-import { useAudio } from "@/hooks/useAudio";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
@@ -42,7 +41,6 @@ export default function Home() {
   const [position, setPosition] = useState<string | undefined>(undefined);
   const [time, setTime] = useState<string | undefined>("0:00 - 0:00");
   const discStyle = active ? "animate-spin-slow" : "";
-  // const { audio } = useAudio();
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   const playPrevNext = useCallback(
