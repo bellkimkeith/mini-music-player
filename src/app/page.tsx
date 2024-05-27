@@ -6,7 +6,7 @@ import Play from "@/components/icons/Play";
 import Previous from "@/components/icons/Previous";
 import { useAudio } from "@/hooks/useAudio";
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const SONGDATA = [
   {
@@ -42,17 +42,20 @@ export default function Home() {
   const [position, setPosition] = useState<string | undefined>(undefined);
   const [time, setTime] = useState<string | undefined>("0:00 - 0:00");
   const discStyle = active ? "animate-spin-slow" : "";
-  const { audio } = useAudio();
+  // const { audio } = useAudio();
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   const playPrevNext = useCallback(
     (songNumber: number) => {
-      const song = SONGDATA[songNumber];
-      audio.current.src = song.src;
-      setTitle(song.title);
-      setArtist(song.artist);
-      setCover(song.cover);
-      audio.current.play();
-      setActive(true);
+      if (audio) {
+        const song = SONGDATA[songNumber];
+        audio.src = song.src;
+        setTitle(song.title);
+        setArtist(song.artist);
+        setCover(song.cover);
+        audio.play();
+        setActive(true);
+      }
     },
     [audio]
   );
@@ -70,37 +73,43 @@ export default function Home() {
   }, [playPrevNext, song]);
 
   const updateProgress = useCallback(() => {
-    if (audio.current.duration) {
+    if (audio && audio.duration) {
       setPosition(
-        ((audio.current.currentTime / audio.current.duration) * 100).toFixed(
-          0
-        ) + "%"
+        ((audio.currentTime / audio.duration) * 100).toFixed(0) + "%"
       );
-      const duration = formatTime(audio.current.duration);
-      const currentTime = formatTime(audio.current.currentTime);
+      const duration = formatTime(audio.duration);
+      const currentTime = formatTime(audio.currentTime);
 
       setTime(`${currentTime} - ${duration}`);
     }
   }, [audio]);
 
   const loadSong = useCallback(() => {
-    setTitle(song.title);
-    setArtist(song.artist);
-    setCover(song.cover);
-    audio.current.src = song.src;
-    audio.current.addEventListener("timeupdate", updateProgress);
-    audio.current.addEventListener("ended", next);
+    if (audio) {
+      setTitle(song.title);
+      setArtist(song.artist);
+      setCover(song.cover);
+      audio.src = song.src;
+      audio.addEventListener("timeupdate", updateProgress);
+      audio.addEventListener("ended", next);
+    }
   }, [song, audio, next, updateProgress]);
+
+  useEffect(() => {
+    setAudio(new Audio());
+  }, []);
 
   useEffect(() => {
     loadSong();
   }, [loadSong]);
 
   const toggle = () => {
-    if (active) {
-      audio.current.pause();
-    } else {
-      audio.current.play();
+    if (audio) {
+      if (active) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
     }
 
     setActive(!active);
