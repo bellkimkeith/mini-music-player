@@ -139,7 +139,7 @@ export default function Home() {
           <div className="text-[#777] text-base my-1">{time}</div>
         </div>
         <div className="max-w-36 relative">
-          <div className="absolute transform -translate-x-1/2 -translate-y-20 top-1/2 left-1/2 h-5 w-5 bg-white rounded-full z-10"></div>
+          <div className="absolute -translate-x-1/2 -translate-y-20 top-1/2 left-1/2 h-5 w-5 bg-white rounded-full z-10"></div>
           <Image
             src={cover}
             alt="Song cover"
@@ -147,7 +147,7 @@ export default function Home() {
             height={145}
             quality={100}
             priority={true}
-            className={`absolute transform -translate-x-1/2 -translate-y-36 top-1/2 left-1/2 h-36 w-36 border-2 border-white rounded-full transition-all ease-in-out duration-200 bg-cover ${discStyle}`}
+            className={`absolute -top-36 left-0 h-36 w-36 border-2 border-white rounded-full transition-all ease-in-out duration-200 bg-cover ${discStyle}`}
           />
         </div>
         <div className="flex flex-row justify-center items-center bg-[#111] gap-2 w-96 h-20 rounded-[18px]">
