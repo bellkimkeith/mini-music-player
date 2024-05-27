@@ -39,7 +39,7 @@ export default function Home() {
   const [artist, setArtist] = useState<string | undefined>(undefined);
   const [cover, setCover] = useState<string>("");
   const [position, setPosition] = useState<string | undefined>(undefined);
-  const [time, setTime] = useState<string | undefined>("0:00 - 0:00");
+  const [time, setTime] = useState<string | undefined>("00:00 - 00:00");
   const discStyle = active ? "animate-spin-slow" : "";
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
@@ -117,7 +117,9 @@ export default function Home() {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
 
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    return `${minutes < 10 ? "0" : ""}${minutes}:${
+      seconds < 10 ? "0" : ""
+    }${seconds}`;
   };
 
   // todo: Seek functionality refactor next and prev

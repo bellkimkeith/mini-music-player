@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mini Player App
 
-## Getting Started
+An application used to add, view, edit and delete items in your menu, built with React, Redux Toolkit, JavaScript, Formik with Yup, TailwindCSS with Flowbite for React.
 
-First, run the development server:
+## Project Screen Shot
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img src="screenshots/miniplayer.png" style="border-radius: 10px;">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation and Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Installation:
 
-## Learn More
+`npm install`
 
-To learn more about Next.js, take a look at the following resources:
+To Start Server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`npm start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To Visit App:
 
-## Deploy on Vercel
+`localhost:3000/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Important 3rd Party libraries used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- NextJS (https://nextjs.org/)
+
+- Tailwind (https://tailwindcss.com/)
+
+## Roadmap
+
+- Seek functionality
+- Display lyrics
+- Upload own mp3
+- Repeat and Shuffle
