@@ -121,6 +121,8 @@ export default function Home() {
   const [isDragging, setIsDragging] = useState(false);
   const [shuffle, setShuffle] = useState(false);
   const [repeat, setRepeat] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const toggleTheme = () => setTheme(t => t === "dark" ? "light" : "dark");
 
   useEffect(() => {
     shuffleRef.current = shuffle;
@@ -271,21 +273,70 @@ export default function Home() {
   }, [isDragging, seek]);
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0a0805]">
+    <main
+      data-theme={theme}
+      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      style={{ background: "var(--jazz-bg)", transition: "background 0.3s ease" }}
+    >
 
       {/* Ambient amber orbs */}
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-amber-900/25 blur-[100px]" />
-        <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-orange-900/20 blur-[120px]" />
+        <div className={`absolute -top-32 -left-32 h-96 w-96 rounded-full blur-[100px] ${
+          theme === "dark" ? "bg-amber-900/25" : "bg-amber-400/20"
+        }`} />
+        <div className={`absolute -bottom-32 -right-32 h-96 w-96 rounded-full blur-[120px] ${
+          theme === "dark" ? "bg-orange-900/20" : "bg-orange-300/25"
+        }`} />
         <div
-          className={`absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-900/15 blur-[80px] transition-opacity duration-700 ${
+          className={`absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px] transition-opacity duration-700 ${
             active ? "opacity-100 animate-pulse-glow" : "opacity-30"
-          }`}
+          } ${theme === "dark" ? "bg-amber-900/15" : "bg-amber-300/20"}`}
         />
       </div>
 
       {/* Card wrapper — relative so vinyl can peek out */}
       <div className="relative z-10 w-[380px] animate-fade-in">
+
+        {/* Theme toggle pill */}
+        <div className="flex justify-center mb-3">
+          <button
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            style={{
+              position: "relative",
+              width: "72px",
+              height: "28px",
+              borderRadius: "9999px",
+              border: "1px solid var(--jazz-card-border, rgba(201,169,110,0.2))",
+              background: "var(--jazz-card)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "0 8px",
+              transition: "border-color 0.3s ease, background 0.3s ease",
+            }}
+          >
+            <span
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                top: "3px",
+                left: theme === "dark" ? "3px" : "calc(100% - 25px)",
+                width: "22px",
+                height: "22px",
+                borderRadius: "50%",
+                background: "linear-gradient(145deg, var(--jazz-amberLt), var(--jazz-amber))",
+                boxShadow: "0 0 8px rgba(201,169,110,0.5)",
+                transition: "left 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+              }}
+            />
+            <span style={{ fontSize: "11px", zIndex: 1, color: theme === "dark" ? "#0a0805" : "var(--jazz-muted)", transition: "color 0.3s ease" }}>☀</span>
+            <span style={{ fontSize: "11px", zIndex: 1, color: theme === "light" ? "#2a1a08" : "var(--jazz-muted)", transition: "color 0.3s ease" }}>☽</span>
+          </button>
+        </div>
 
         {/* Vinyl record — floats behind and below the card */}
         <div className="absolute bottom-[-24px] right-[-18px] z-0 animate-float-vinyl opacity-75">
@@ -337,7 +388,7 @@ export default function Home() {
             {/* Track counter */}
             <p
               className="font-mono-time text-[10px] uppercase tracking-widest mb-1"
-              style={{ color: "rgba(201,169,110,0.55)" }}
+              style={{ color: "var(--jazz-amber)", opacity: 0.65 }}
             >
               {song.id} / {SONGDATA.length}
             </p>
