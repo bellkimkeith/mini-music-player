@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="60%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- burger bun top -->
+  <ellipse cx="72.5" cy="52" rx="24" ry="14" fill="#fbbf24"/>
+  <!-- sesame seeds -->
+  <ellipse cx="65" cy="48" rx="3" ry="1.5" fill="#92400e" transform="rotate(-20 65 48)"/>
+  <ellipse cx="75" cy="46" rx="3" ry="1.5" fill="#92400e" transform="rotate(10 75 46)"/>
+  <ellipse cx="83" cy="50" rx="3" ry="1.5" fill="#92400e" transform="rotate(-15 83 50)"/>
+  <!-- patty -->
+  <rect x="48" y="63" width="48" height="10" rx="3" fill="#92400e"/>
+  <!-- lettuce -->
+  <path d="M46 73 Q55 68 64 73 Q73 78 82 73 Q91 68 98 73 L98 77 Q91 72 82 77 Q73 82 64 77 Q55 72 46 77Z" fill="#4ade80"/>
+  <!-- bun bottom -->
+  <ellipse cx="72.5" cy="84" rx="24" ry="10" fill="#fbbf24"/>
+</svg>

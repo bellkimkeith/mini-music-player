@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="60%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#1c0a12"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- big heart -->
+  <path d="M72.5 95 C72.5 95 42 75 42 57 A18 18 0 0 1 72.5 52 A18 18 0 0 1 103 57 C103 75 72.5 95 72.5 95Z" fill="#fda4af" opacity="0.9"/>
+  <!-- small hearts -->
+  <path d="M38 42 C38 42 30 37 30 31 A6 6 0 0 1 38 29 A6 6 0 0 1 46 31 C46 37 38 42 38 42Z" fill="#fda4af" opacity="0.5"/>
+  <path d="M108 38 C108 38 100 33 100 27 A6 6 0 0 1 108 25 A6 6 0 0 1 116 27 C116 33 108 38 108 38Z" fill="#fda4af" opacity="0.4"/>
+  <path d="M30 100 C30 100 23 96 23 91 A5 5 0 0 1 30 89 A5 5 0 0 1 37 91 C37 96 30 100 30 100Z" fill="#fda4af" opacity="0.35"/>
+  <path d="M115 105 C115 105 108 101 108 96 A5 5 0 0 1 115 94 A5 5 0 0 1 122 96 C122 101 115 105 115 105Z" fill="#fda4af" opacity="0.35"/>
+</svg>

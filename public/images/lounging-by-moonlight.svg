@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="70%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- moon -->
+  <circle cx="72.5" cy="45" r="20" fill="url(#moon)"/>
+  <circle cx="83" cy="38" r="20" fill="#0a0f1e"/>
+  <!-- stars -->
+  <circle cx="25" cy="30" r="1.5" fill="white" opacity="0.9"/>
+  <circle cx="115" cy="25" r="1" fill="white" opacity="0.7"/>
+  <circle cx="35" cy="55" r="1" fill="white" opacity="0.6"/>
+  <circle cx="120" cy="55" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="20" cy="75" r="1" fill="white" opacity="0.5"/>
+  <circle cx="128" cy="80" r="1" fill="white" opacity="0.7"/>
+  <!-- moon reflection on water -->
+  <ellipse cx="72.5" cy="115" rx="8" ry="3" fill="#fde68a" opacity="0.4"/>
+  <path d="M60 105 Q72.5 100 85 105" fill="none" stroke="#fde68a" stroke-width="1" opacity="0.3"/>
+  <!-- water lines -->
+  <path d="M30 100 Q55 95 80 100 Q105 105 118 100" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.6"/>
+  <path d="M25 110 Q50 105 75 110 Q100 115 120 110" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.4"/>
+</svg>

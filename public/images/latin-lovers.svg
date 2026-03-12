@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="55%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#1c0a0a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- rose stem -->
+  <line x1="72.5" y1="100" x2="72.5" y2="75" stroke="#4ade80" stroke-width="2"/>
+  <path d="M72.5 90 Q62 85 60 78" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+  <!-- rose petals -->
+  <ellipse cx="72.5" cy="62" rx="10" ry="14" fill="#fb7185" opacity="0.9"/>
+  <ellipse cx="63" cy="67" rx="9" ry="12" fill="#f43f5e" opacity="0.85" transform="rotate(-30 63 67)"/>
+  <ellipse cx="82" cy="67" rx="9" ry="12" fill="#f43f5e" opacity="0.85" transform="rotate(30 82 67)"/>
+  <ellipse cx="72.5" cy="72" rx="8" ry="10" fill="#fda4af" opacity="0.7" transform="rotate(15 72.5 72)"/>
+  <!-- heart -->
+  <path d="M72.5 108 C72.5 108 58 99 58 91 A7 7 0 0 1 72.5 89 A7 7 0 0 1 87 91 C87 99 72.5 108 72.5 108Z" fill="#fb7185" opacity="0.8"/>
+</svg>

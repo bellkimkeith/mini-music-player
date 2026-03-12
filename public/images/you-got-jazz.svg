@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="40%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- colorful confetti dots -->
+  <circle cx="35" cy="40" r="5" fill="#facc15"/>
+  <circle cx="55" cy="28" r="4" fill="#34d399"/>
+  <circle cx="85" cy="32" r="5" fill="#fb7185"/>
+  <circle cx="110" cy="45" r="4" fill="#38bdf8"/>
+  <circle cx="120" cy="70" r="5" fill="#facc15"/>
+  <circle cx="108" cy="100" r="4" fill="#a78bfa"/>
+  <circle cx="80" cy="118" r="5" fill="#34d399"/>
+  <circle cx="50" cy="115" r="4" fill="#fb7185"/>
+  <circle cx="25" cy="95" r="5" fill="#38bdf8"/>
+  <circle cx="30" cy="65" r="4" fill="#a78bfa"/>
+  <!-- big music notes -->
+  <text x="52" y="82" font-size="38" fill="white" opacity="0.85" font-family="serif" font-weight="bold">♫</text>
+</svg>

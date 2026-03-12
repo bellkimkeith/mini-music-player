@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="55%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#1c1108"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- saxophone simplified shape -->
+  <!-- body -->
+  <path d="M80 35 Q90 35 90 50 L88 85 Q88 100 75 105 Q62 108 58 98 Q54 88 62 82 Q70 78 72 72 L74 50 Q74 38 80 35Z" fill="#fbbf24" opacity="0.85"/>
+  <!-- bell -->
+  <ellipse cx="65" cy="103" rx="12" ry="8" fill="#fbbf24" opacity="0.7"/>
+  <!-- keys (circles) -->
+  <circle cx="82" cy="55" r="3" fill="#92400e"/>
+  <circle cx="84" cy="65" r="3" fill="#92400e"/>
+  <circle cx="84" cy="75" r="3" fill="#92400e"/>
+  <!-- mouthpiece -->
+  <rect x="76" y="28" width="8" height="10" rx="3" fill="#fde68a"/>
+  <!-- music note -->
+  <path d="M35 55 L35 40 L48 37 L48 52 M35 55 A4 4 0 1 0 39 55 M44 52 A4 4 0 1 0 48 52" fill="#fde68a" opacity="0.5"/>
+</svg>

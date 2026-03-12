@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="50%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="72.5" cy="72.5" r="18" fill="#fde68a" opacity="0.95"/>
+  <!-- sun rays -->
+  <line x1="72.5" y1="46" x2="72.5" y2="38" stroke="#fde68a" stroke-width="2.5" opacity="0.7"/>
+  <line x1="72.5" y1="99" x2="72.5" y2="107" stroke="#fde68a" stroke-width="2.5" opacity="0.7"/>
+  <line x1="46" y1="72.5" x2="38" y2="72.5" stroke="#fde68a" stroke-width="2.5" opacity="0.7"/>
+  <line x1="99" y1="72.5" x2="107" y2="72.5" stroke="#fde68a" stroke-width="2.5" opacity="0.7"/>
+  <line x1="54" y1="54" x2="48" y2="48" stroke="#fde68a" stroke-width="2" opacity="0.6"/>
+  <line x1="91" y1="54" x2="97" y2="48" stroke="#fde68a" stroke-width="2" opacity="0.6"/>
+  <line x1="54" y1="91" x2="48" y2="97" stroke="#fde68a" stroke-width="2" opacity="0.6"/>
+  <line x1="91" y1="91" x2="97" y2="97" stroke="#fde68a" stroke-width="2" opacity="0.6"/>
+  <!-- ocean horizon -->
+  <path d="M0 105 Q36 100 72.5 105 Q109 110 145 105 L145 145 L0 145Z" fill="#0369a1" opacity="0.6"/>
+  <!-- palm tree silhouette -->
+  <line x1="25" y1="130" x2="30" y2="95" stroke="#1c1c1c" stroke-width="3"/>
+  <path d="M30 95 Q20 85 10 88" fill="none" stroke="#166534" stroke-width="3"/>
+  <path d="M30 95 Q38 83 50 85" fill="none" stroke="#166534" stroke-width="3"/>
+  <path d="M30 95 Q28 80 20 76" fill="none" stroke="#166534" stroke-width="2.5"/>
+</svg>

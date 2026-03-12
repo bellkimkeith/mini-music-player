@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" width="145" height="145">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#3730a3"/>
+      <stop offset="100%" stop-color="#0d0a1e"/>
+    </radialGradient>
+  </defs>
+  <circle cx="72.5" cy="72.5" r="72.5" fill="url(#bg)"/>
+  <!-- vinyl record rings -->
+  <circle cx="72.5" cy="72.5" r="55" fill="none" stroke="#4c1d95" stroke-width="3" opacity="0.5"/>
+  <circle cx="72.5" cy="72.5" r="45" fill="none" stroke="#5b21b6" stroke-width="2" opacity="0.4"/>
+  <circle cx="72.5" cy="72.5" r="35" fill="none" stroke="#6d28d9" stroke-width="2" opacity="0.4"/>
+  <circle cx="72.5" cy="72.5" r="25" fill="#1e1b4b"/>
+  <!-- music note -->
+  <path d="M68 62 L68 80 M68 80 A6 6 0 1 0 74 80 M74 62 L74 74 M68 62 L74 60" fill="none" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- small stars/sparkles -->
+  <circle cx="30" cy="35" r="2" fill="#a78bfa" opacity="0.7"/>
+  <circle cx="112" cy="42" r="1.5" fill="#c4b5fd" opacity="0.6"/>
+  <circle cx="118" cy="100" r="2" fill="#a78bfa" opacity="0.5"/>
+  <circle cx="25" cy="105" r="1.5" fill="#c4b5fd" opacity="0.6"/>
+</svg>
